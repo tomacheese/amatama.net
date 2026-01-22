@@ -2,30 +2,9 @@
 
 🥚 Sweet eggs
 
-## 概要
-
 [amatama.net](https://amatama.net) のソースコードです。
 
 卵の画像が表示され、ホバーすると tomachi アイコンが現れるシンプルな静的ウェブサイトです。
-
-## 技術スタック
-
-- HTML
-- CSS（アニメーション）
-- SVG（tomachi アイコン）
-
-## ローカルでの実行
-
-```bash
-# リポジトリのクローン
-git clone https://github.com/tomacheese/amatama.net.git
-cd amatama.net
-
-# ブラウザで開く
-open index.html
-# または
-xdg-open index.html
-```
 
 ## クレジット
 
