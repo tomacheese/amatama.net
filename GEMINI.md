@@ -33,4 +33,6 @@
 - 既存のプロジェクトルールがある場合はそれを優先する。
 
 ## リポジトリ固有
-- 目的: 🥚 Sweet eggs
+- 概要: Sweet eggs
+- 公開 URL: https://amatama.net
+- 詳細は `README` と `package.json` を参照

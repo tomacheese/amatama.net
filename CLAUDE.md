@@ -90,4 +90,6 @@
 6. PR 本文の崩れがないことを確認する。
 
 ## リポジトリ固有
-- 目的: 🥚 Sweet eggs
+- 概要: Sweet eggs
+- 公開 URL: https://amatama.net
+- 詳細は `README` と `package.json` を参照
