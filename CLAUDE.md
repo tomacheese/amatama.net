@@ -18,7 +18,7 @@ icon (inline SVG) is revealed with a slide animation.
 
 There is no build, test, lint, or package manager (no `package.json`). To
 verify a change, open `index.html` directly in a browser and confirm the
-hover transition (egg fades out, SVG fades in and slides down).
+hover transition (egg fades out, SVG fades in and slides into place).
 
 ## Conventions
 
