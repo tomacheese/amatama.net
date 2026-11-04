@@ -1,30 +1,16 @@
-# Copilot code review instructions
+# Copilot コードレビュー指示
 
-Context for reviewing pull requests in this repository.
+リポジトリの概要と規約は [AGENTS.md](../AGENTS.md) を参照してください。レビューコメントは日本語で書きます。
 
-## About this repo
+## レビューの重点
 
-Single-page static website for [amatama.net](https://amatama.net). The whole
-site is `index.html` with inline CSS and an inline `tomachi` SVG, plus
-`egg.png`. There is no build system, no package manager, and no test/lint
-tooling.
+- **自己完結性**: ビルド工程、フレームワーク、外部の CSS / JS / フォント依存を追加していないか。単一の自己完結した HTML であることは意図的
+- **HTML / CSS の正しさ**: ホバー演出 (`main:hover` で `::before` の卵がフェードアウトし SVG が現れる) が壊れていないか。セレクターの誤り、閉じ忘れ、無効な CSS プロパティーに注意
+- **アセット参照**: `egg.png` は相対パスで参照している。ファイルを移動したときにパスが合っているか
+- **クレジット**: フッターのクレジット (いらすとや、Hiratake) が削除されていないか
+- **アクセシビリティ**: `lang`、`title`、SVG の `<title>` などが後退していないか
 
-## What to focus on in review
+## 指摘しないこと
 
-- **Self-containment**: flag anything that adds a build step, framework, or
-  external CSS/JS/font dependency. The site is intentionally a single
-  self-contained HTML file.
-- **HTML/CSS correctness**: check that the hover interaction still works —
-  `main:hover` fading `::before` (the egg) out and the SVG in. Watch for
-  broken selectors, unclosed tags, or invalid CSS properties.
-- **Asset references**: `egg.png` is referenced by relative path; verify such
-  paths stay correct if files move.
-- **Attribution**: the footer credit line (いらすとや egg image, Hiratake
-  icon) must not be removed. Flag PRs that drop it.
-- **Accessibility**: prefer keeping meaningful `lang`, `title`, and `alt`/SVG
-  `<title>` attributes; note regressions.
-
-## What NOT to flag
-
-- Absence of tests, linters, or a build pipeline — that is by design.
-- Inline CSS and inline SVG — intentional for this single-file site.
+- テスト、lint、ビルド環境がないこと (設計上の方針)
+- インライン CSS とインライン SVG (単一ファイルサイトとして意図的)
